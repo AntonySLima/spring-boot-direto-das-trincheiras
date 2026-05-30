@@ -1,21 +1,22 @@
 package academy.devdojo.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Value;
+import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
-@Value
+@Data
 public class Anime {
-    String name;
-    Long id;
+    private String name;
+    private Long id;
+    @Getter
+    private static List<Anime> animes = new ArrayList<>();
+    static {
+        var attackOnTitan = new Anime("Attack on Titan", 1L);
+        var kimetsuNoYaiba = new Anime("Kimetsu no Yaiba", 2L);
+        var jujustuKaisen = new Anime("Jujustu Kaisen", 3L);
 
-    public static List<Anime> getAnimes() {
-        return List.of(
-                new Anime("Attack on Titan", 1L),
-                new Anime("Kimetsu no Yaiba", 2L),
-                new Anime("Jujustu Kaisen", 3L));
+        animes.addAll(List.of(attackOnTitan,kimetsuNoYaiba,jujustuKaisen));
     }
 }
