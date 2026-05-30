@@ -1,9 +1,8 @@
 package academy.devdojo.controller;
 
+import academy.devdojo.domain.Anime;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,8 +12,17 @@ import java.util.List;
 public class AnimeController {
 
     @GetMapping()
-    public List<String> listAll() {
-        log.info(Thread.currentThread().getName());
-        return List.of("Attack on titan", "Berserk", "Jujutsu Kaisen");
+    public List<Anime> listAll(@RequestParam(required = false) String name) {
+        if (name == null) return Anime.getAnimes();
+        return Anime.getAnimes().stream()
+                .filter(a -> a.getName().equalsIgnoreCase(name))
+                .toList();
+    }
+
+    @GetMapping("/{id}")
+    public Anime findById(@PathVariable Long id) {
+        return Anime.getAnimes().stream()
+                .filter(a -> a.getId().equals(id))
+                .findFirst().orElse(null);
     }
 }
