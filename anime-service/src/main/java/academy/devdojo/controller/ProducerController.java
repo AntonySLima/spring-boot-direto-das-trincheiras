@@ -1,6 +1,7 @@
 package academy.devdojo.controller;
 
 import academy.devdojo.domain.Producer;
+import academy.devdojo.mapper.ProducerMapper;
 import academy.devdojo.request.ProducerPostRequest;
 import academy.devdojo.response.ProducerGetResponse;
 import org.slf4j.Logger;
@@ -14,8 +15,8 @@ import java.util.concurrent.ThreadLocalRandom;
 @RestController
 @RequestMapping("v1/producers")
 public class ProducerController {
-
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(ProducerController.class);
+    private static final ProducerMapper MAPPER = ProducerMapper.INSTANCE;
 
     @GetMapping()
     public List<Producer> listAll(@RequestParam(required = false) String name) {
@@ -32,24 +33,14 @@ public class ProducerController {
                 .findFirst().orElse(null);
     }
 
-    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE,
-            headers = "x-api-key")
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE, headers = "x-api-key")
     public ResponseEntity<ProducerGetResponse> save(@RequestBody ProducerPostRequest producerPostRequest, @RequestHeader HttpHeaders headers) {
         log.info("header '{}'", headers);
-        var producer = Producer.builder()
-                .id(ThreadLocalRandom.current().nextLong(1, 1000))
-                .name(producerPostRequest.getName())
-                .createdAt(LocalDateTime.now())
-                .build();
+        var producer = MAPPER.toProducer(producerPostRequest);
+        var response = MAPPER.toProducerGetResponse(producer);
+
         Producer.getProducers().add(producer);
-        log.info("Saved Producer: '{}'", producerPostRequest);
 
-        var producerResponse = ProducerGetResponse.builder()
-                .id(producer.getId())
-                .name(producer.getName())
-                .createdAt(producer.getCreatedAt())
-                .build();
-
-        return ResponseEntity.status(HttpStatus.CREATED).body(producerResponse);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 }
