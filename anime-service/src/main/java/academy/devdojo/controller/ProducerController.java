@@ -1,10 +1,13 @@
 package academy.devdojo.controller;
 
 import academy.devdojo.domain.Producer;
+import academy.devdojo.request.ProducerPostRequest;
+import academy.devdojo.response.ProducerGetResponse;
 import org.slf4j.Logger;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -31,14 +34,22 @@ public class ProducerController {
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE,
             headers = "x-api-key")
-    public ResponseEntity<Producer> save(@RequestBody Producer producer, @RequestHeader HttpHeaders headers) {
+    public ResponseEntity<ProducerGetResponse> save(@RequestBody ProducerPostRequest producerPostRequest, @RequestHeader HttpHeaders headers) {
         log.info("header '{}'", headers);
-        producer.setId(ThreadLocalRandom.current().nextLong(1, 1000));
+        var producer = Producer.builder()
+                .id(ThreadLocalRandom.current().nextLong(1, 1000))
+                .name(producerPostRequest.getName())
+                .createdAt(LocalDateTime.now())
+                .build();
         Producer.getProducers().add(producer);
-        log.info("Saved Producer: '{}'", producer);
-        var respondeHeaders = new HttpHeaders();
-        respondeHeaders.add("Authorization", "My key");
+        log.info("Saved Producer: '{}'", producerPostRequest);
 
-        return ResponseEntity.status(HttpStatus.CREATED).headers(respondeHeaders).body(producer);
+        var producerResponse = ProducerGetResponse.builder()
+                .id(producer.getId())
+                .name(producer.getName())
+                .createdAt(producer.getCreatedAt())
+                .build();
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(producerResponse);
     }
 }

@@ -1,47 +1,30 @@
 package academy.devdojo.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@AllArgsConstructor
 @Data
+@Builder
 public class Producer {
     private String name;
     private Long id;
+    private LocalDateTime createdAt;
 
     private static List<Producer> producers = new ArrayList<>();
     static {
-        var mappa = new Producer("Mappa", 1L);
-        var bandaiNamco = new Producer("Bandai Namco", 2L);
-        var madhouse = new Producer("Madhouse", 3L);
+        var mappa = Producer.builder().name("Mappa").id(1L).createdAt(LocalDateTime.now()).build();
+        var bandaiNamco = Producer.builder().name("Bandai Namco").id(2L).createdAt(LocalDateTime.now()).build();
+        var madhouse = Producer.builder().name("Madhouse").id(3L).createdAt(LocalDateTime.now()).build();
 
         producers.addAll(List.of(mappa,bandaiNamco,madhouse));
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
     public static List<Producer> getProducers() {
         return producers;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public static void setProducers(List<Producer> producers) {
-        Producer.producers = producers;
     }
 }
