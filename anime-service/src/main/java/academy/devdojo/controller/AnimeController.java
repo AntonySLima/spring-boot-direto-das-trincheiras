@@ -2,6 +2,7 @@ package academy.devdojo.controller;
 
 import academy.devdojo.domain.Anime;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class AnimeController {
                 .findFirst().orElse(null);
     }
 
-    @PostMapping
+    @PostMapping()
     public Anime save(@RequestBody Anime anime) {
         anime.setId(ThreadLocalRandom.current().nextLong(1,1000));
         Anime.getAnimes().add(anime);
