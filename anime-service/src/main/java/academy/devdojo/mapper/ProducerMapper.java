@@ -6,9 +6,6 @@ import academy.devdojo.response.ProducerGetResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
-import org.springframework.cglib.core.Local;
-
-import java.time.LocalDateTime;
 
 @Mapper
 public interface ProducerMapper {
