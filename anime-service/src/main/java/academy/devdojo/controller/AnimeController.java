@@ -3,15 +3,15 @@ package academy.devdojo.controller;
 import academy.devdojo.domain.Anime;
 import academy.devdojo.mapper.AnimeMapper;
 import academy.devdojo.request.AnimePostRequest;
-import academy.devdojo.request.AnimePostResponse;
 import academy.devdojo.response.AnimeGetResponse;
+import academy.devdojo.response.AnimePostResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("v1/animes")
@@ -40,7 +40,7 @@ public class AnimeController {
                 .filter(a -> a.getId().equals(id))
                 .findFirst()
                 .map(MAPPER::toAnimeGetResponse)
-                .orElse(null);
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Anime not found"));
 
         return ResponseEntity.ok(animeGetResponse);
     }
