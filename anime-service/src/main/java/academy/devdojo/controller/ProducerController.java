@@ -1,8 +1,11 @@
 package academy.devdojo.controller;
 
+import academy.devdojo.domain.Anime;
 import academy.devdojo.domain.Producer;
 import academy.devdojo.mapper.ProducerMapper;
+import academy.devdojo.request.AnimePutRequest;
 import academy.devdojo.request.ProducerPostRequest;
+import academy.devdojo.response.AnimePutResponse;
 import academy.devdojo.response.ProducerGetResponse;
 import academy.devdojo.response.ProducerPostResponse;
 import org.slf4j.Logger;
