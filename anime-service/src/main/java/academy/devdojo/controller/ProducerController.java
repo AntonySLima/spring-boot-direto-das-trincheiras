@@ -1,13 +1,15 @@
 package academy.devdojo.controller;
 
-import academy.devdojo.domain.Anime;
+import academy.devdojo.domain.Producer;
 import academy.devdojo.domain.Producer;
 import academy.devdojo.mapper.ProducerMapper;
-import academy.devdojo.request.AnimePutRequest;
+import academy.devdojo.request.ProducerPutRequest;
 import academy.devdojo.request.ProducerPostRequest;
-import academy.devdojo.response.AnimePutResponse;
+import academy.devdojo.request.ProducerPutRequest;
+import academy.devdojo.response.ProducerPutResponse;
 import academy.devdojo.response.ProducerGetResponse;
 import academy.devdojo.response.ProducerPostResponse;
+import academy.devdojo.response.ProducerPutResponse;
 import org.slf4j.Logger;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -71,5 +73,23 @@ public class ProducerController {
         }
 
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @PutMapping()
+    public ResponseEntity<ProducerPutResponse> update(@RequestBody ProducerPutRequest request) {
+
+        var producerToRemove = Producer.getProducers().stream()
+                .filter(producer -> producer.getId().equals(request.getId()))
+                .findFirst()
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producer not found"));
+
+        var producerUpdated = MAPPER.toProducer(request, producerToRemove.getCreatedAt());
+
+        Producer.getProducers().remove(producerToRemove);
+        Producer.getProducers().add(producerUpdated);
+
+        ProducerPutResponse producerPutResponse = MAPPER.toProducerPutResponse(producerUpdated);
+
+        return ResponseEntity.ok(producerPutResponse);
     }
 }
