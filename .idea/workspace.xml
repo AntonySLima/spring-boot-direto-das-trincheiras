@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b9876882-be04-49ba-a8ad-c5a20b9b4312" name="Changes" comment="video29: Exercise 07 - MVC Pattern">
+      <change afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/repository/AnimeHardCodedRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/service/AnimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/AnimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/AnimeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/ProducerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/controller/ProducerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/domain/Anime.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/domain/Anime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/mapper/ProducerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/mapper/ProducerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/service/ProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/anime-service/src/main/java/academy/devdojo/service/ProducerService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="42" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="video27" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AntonySLima&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AntonySLima/spring-boot-direto-das-trincheiras.git",
+    "accountId": "ae9265b9-ba3d-4f62-b3a1-1bcad6bad3d8"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="2.350476102315381E-19" />
+      <entry key="MS500" value="2.9929662957400507E-4" />
+      <entry key="S2" value="0.22003831238120453" />
+      <entry key="S5" value="0.8268596178943334" />
+      <entry key="S10" value="1.2869066676721264" />
+      <entry key="S30" value="1.8272403135819384" />
+      <entry key="S60" value="2.187843106295745" />
+      <entry key="M2" value="2.676156856080728" />
+      <entry key="M5" value="4.817016029455999" />
+      <entry key="M10" value="8.810234587217636" />
+      <entry key="M15" value="11.663157751922101" />
+      <entry key="M30" value="16.07325062151113" />
+      <entry key="H1" value="19.141176146292928" />
+      <entry key="H2" value="20.959207803251548" />
+      <entry key="H4" value="21.950011761918216" />
+      <entry key="D1" value="22.820734264937265" />
+      <entry key="W1" value="22.974283971643416" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.001315657789908" />
+      <entry key="MS500" value="1.2660766588831394" />
+      <entry key="S2" value="1.8833659573971202" />
+      <entry key="S5" value="2.498192980430016" />
+      <entry key="S10" value="3.2993087108988726" />
+      <entry key="S30" value="4.993743517713305" />
+      <entry key="S60" value="5.925326758716302" />
+      <entry key="M2" value="7.3834082614341146" />
+      <entry key="M5" value="14.124828022885426" />
+      <entry key="M10" value="25.080038690197377" />
+      <entry key="M15" value="32.51439029790638" />
+      <entry key="M30" value="43.733246449630755" />
+      <entry key="H1" value="51.42036618266949" />
+      <entry key="H2" value="55.94421390867873" />
+      <entry key="H4" value="58.40151402234114" />
+      <entry key="D1" value="60.55674450028561" />
+      <entry key="W1" value="60.93642363531956" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.003217152411201883" />
+      <entry key="MS500" value="0.3186751168547112" />
+      <entry key="S2" value="1.244261214775023" />
+      <entry key="S5" value="2.7223649019240317" />
+      <entry key="S10" value="4.1766882433619985" />
+      <entry key="S30" value="6.621312631393368" />
+      <entry key="S60" value="7.9873525117017445" />
+      <entry key="M2" value="9.967282645812112" />
+      <entry key="M5" value="18.852552189481358" />
+      <entry key="M10" value="33.80777478482052" />
+      <entry key="M15" value="44.10641098780363" />
+      <entry key="M30" value="59.75917371030593" />
+      <entry key="H1" value="70.53395571077142" />
+      <entry key="H2" value="76.88848846048776" />
+      <entry key="H4" value="80.34375157963137" />
+      <entry key="D1" value="83.37613828353659" />
+      <entry key="W1" value="83.91051498499208" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3EN3E2S52s7gl9vrQMy7IJecM6q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AnimeServiceApplicationTests.contextLoads.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "Spring Boot.AnimeServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/Meu Drive/IdeaProjects/spring-boot-direto-das-trincheiras",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "ml.llm.AcpAgentsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="academy.devdojo.response" />
+      <recent name="academy.devdojo.controller" />
+      <recent name="academy.devdojo.domain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AnimeServiceApplication">
+    <configuration name="AnimeServiceApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="anime-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="academy.devdojo" />
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.AnimeServiceApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimeServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="anime-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="academy.devdojo.AnimeServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx500m -XshowSettings:vm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AnimeServiceApplicationTests.contextLoads" />
+      <item itemvalue="Spring Boot.AnimeServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AnimeServiceApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.AnimeServiceApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.AnimeServiceApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.AnimeServiceApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.AnimeServiceApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9876882-be04-49ba-a8ad-c5a20b9b4312" name="Changes" comment="" />
+      <created>1780005085270</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780005085270</updated>
+      <workItem from="1780005086079" duration="220000" />
+      <workItem from="1780005311964" duration="6481000" />
+      <workItem from="1780052573776" duration="17437000" />
+      <workItem from="1780091987908" duration="11000" />
+      <workItem from="1780092026497" duration="7654000" />
+      <workItem from="1780150644810" duration="3931000" />
+      <workItem from="1780178460959" duration="8825000" />
+      <workItem from="1780232283416" duration="4200000" />
+      <workItem from="1780236542106" duration="9985000" />
+      <workItem from="1780263206279" duration="1943000" />
+      <workItem from="1780310933556" duration="16330000" />
+      <workItem from="1780352700517" duration="4110000" />
+      <workItem from="1780397135302" duration="9910000" />
+    </task>
+    <task id="LOCAL-00001" summary="video04: getting to know the service files">
+      <option name="closed" value="true" />
+      <created>1780007018130</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1780007018130</updated>
+    </task>
+    <task id="LOCAL-00002" summary="video04: getting to know the service files">
+      <option name="closed" value="true" />
+      <created>1780010302108</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1780010302108</updated>
+    </task>
+    <task id="LOCAL-00003" summary="video07: RequestMapping and Servlet Context">
+      <option name="closed" value="true" />
+      <created>1780056396488</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780056396489</updated>
+    </task>
+    <task id="LOCAL-00004" summary="video08: Spring Beans and ComponentScan">
+      <option name="closed" value="true" />
+      <created>1780058969862</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780058969862</updated>
+    </task>
+    <task id="LOCAL-00005" summary="video08: GetMapping exercise">
+      <option name="closed" value="true" />
+      <created>1780067178350</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1780067178350</updated>
+    </task>
+    <task id="LOCAL-00006" summary="video10: Virtual Threads, Stacktrace and Tomcat Threads">
+      <option name="closed" value="true" />
+      <created>1780070178508</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1780070178508</updated>
+    </task>
+    <task id="LOCAL-00007" summary="video12: PathVariable">
+      <option name="closed" value="true" />
+      <created>1780096426365</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1780096426365</updated>
+    </task>
+    <task id="LOCAL-00008" summary="video13: exercise 02 RequestParam and PathVariable">
+      <option name="closed" value="true" />
+      <created>1780100651138</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1780100651138</updated>
+    </task>
+    <task id="LOCAL-00009" summary="video14: PostMapping">
+      <option name="closed" value="true" />
+      <created>1780152130518</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1780152130518</updated>
+    </task>
+    <task id="LOCAL-00010" summary="video15: Exercise03 - PostMapping">
+      <option name="closed" value="true" />
+      <created>1780154525563</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1780154525563</updated>
+    </task>
+    <task id="LOCAL-00011" summary="video17: ResponseEntity">
+      <option name="closed" value="true" />
+      <created>1780187306362</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1780187306362</updated>
+    </task>
+    <task id="LOCAL-00012" summary="video18: desacoplando request e response do dominio">
+      <option name="closed" value="true" />
+      <created>1780190753777</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1780190753777</updated>
+    </task>
+    <task id="LOCAL-00013" summary="video19: MapStruct">
+      <option name="closed" value="true" />
+      <created>1780236152373</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1780236152373</updated>
+    </task>
+    <task id="LOCAL-00014" summary="video20: exercise 04 - MapStruct">
+      <option name="closed" value="true" />
+      <created>1780311665403</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1780311665403</updated>
+    </task>
+    <task id="LOCAL-00015" summary="video22: DeleteMapping">
+      <option name="closed" value="true" />
+      <created>1780318302053</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1780318302053</updated>
+    </task>
+    <task id="LOCAL-00016" summary="video23: Exercise 05 - DeleteMapping">
+      <option name="closed" value="true" />
+      <created>1780329721462</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1780329721462</updated>
+    </task>
+    <task id="LOCAL-00017" summary="video23: Exercise 05 - DeleteMapping">
+      <option name="closed" value="true" />
+      <created>1780330443496</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1780330443496</updated>
+    </task>
+    <task id="LOCAL-00018" summary="video24: PutMapping">
+      <option name="closed" value="true" />
+      <created>1780334279383</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1780334279383</updated>
+    </task>
+    <task id="LOCAL-00019" summary="video25: ProducerService">
+      <option name="closed" value="true" />
+      <created>1780354422349</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1780354422350</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="video04: getting to know the service files" />
+    <MESSAGE value="video05: getting to know pom xml and servlet container" />
+    <MESSAGE value="video07: RequestMapping and Servlet Context" />
+    <MESSAGE value="video08: Spring Beans and ComponentScan" />
+    <MESSAGE value="video08: GetMapping exercide" />
+    <MESSAGE value="video08: GetMapping exercise" />
+    <MESSAGE value="video09: Virtual Threads, Stacktrace and Tomcat Threads" />
+    <MESSAGE value="video10: Virtual Threads, Stacktrace and Tomcat Threads" />
+    <MESSAGE value="video11: RequestParams and defaultValue" />
+    <MESSAGE value="video12: PathVariable" />
+    <MESSAGE value="video13: exercise 02 RequestParam and PathVariable" />
+    <MESSAGE value="video14: PostMapping" />
+    <MESSAGE value="video15: Exercise03 - PostMapping" />
+    <MESSAGE value="video17: ResponseEntity" />
+    <MESSAGE value="video18: desacoplando request e response do dominio" />
+    <MESSAGE value="video19: MapStruct" />
+    <MESSAGE value="video20: exercise 04 - MapStruct" />
+    <MESSAGE value="video22: DeleteMapping" />
+    <MESSAGE value="video23: Exercise 05 - DeleteMapping" />
+    <MESSAGE value="video24: PutMapping" />
+    <MESSAGE value="video25: ProducerService" />
+    <MESSAGE value="video29: Exercise 07 - MVC Pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="video29: Exercise 07 - MVC Pattern" />
+  </component>
+</project>
