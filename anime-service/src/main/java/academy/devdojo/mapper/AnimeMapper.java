@@ -27,5 +27,5 @@ public interface AnimeMapper {
     AnimePutResponse toAnimePutResponse(Anime anime);
 
     // Map to List<AnimeGetResponse>
-    List<AnimeGetResponse> toAnimeGetResponseList(List<Anime> animes);
+    List<AnimeGetResponse> toListAnimeGetResponse(List<Anime> animes);
 }

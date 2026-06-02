@@ -20,7 +20,7 @@ public interface ProducerMapper {
     @Mapping(target = "createdAt", expression = "java(java.time.LocalDateTime.now())")
     @Mapping(target = "id", expression = "java(java.util.concurrent.ThreadLocalRandom.current().nextLong(1, 1000))")
     Producer toProducer(ProducerPostRequest postRequest);
-    Producer toProducer(ProducerPutRequest putRequest);
+    Producer toProducer(ProducerPutRequest putRequest, LocalDateTime createdAt);
 
     ProducerGetResponse toProducerGetResponse(Producer producer);
     List<ProducerGetResponse> toProducerGetResponseList(List<Producer> producers);
