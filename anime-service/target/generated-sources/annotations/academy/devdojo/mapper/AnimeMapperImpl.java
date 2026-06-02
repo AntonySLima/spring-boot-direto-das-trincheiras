@@ -12,7 +12,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-06-02T11:39:53-0300",
+    date = "2026-06-02T13:18:00-0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 26.0.1 (Oracle Corporation)"
 )
 public class AnimeMapperImpl implements AnimeMapper {
@@ -94,7 +94,7 @@ public class AnimeMapperImpl implements AnimeMapper {
     }
 
     @Override
-    public List<AnimeGetResponse> toAnimeGetResponseList(List<Anime> animes) {
+    public List<AnimeGetResponse> toListAnimeGetResponse(List<Anime> animes) {
         if ( animes == null ) {
             return null;
         }

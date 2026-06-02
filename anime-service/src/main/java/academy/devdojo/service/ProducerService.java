@@ -12,7 +12,7 @@ import java.util.Optional;
 public class ProducerService {
     private ProducerHardCodedRepository repository;
 
-    public ProducerService(ProducerHardCodedRepository repository) {
+    public ProducerService() {
         this.repository = new ProducerHardCodedRepository();
     }
 

@@ -5,14 +5,13 @@ import academy.devdojo.request.ProducerPostRequest;
 import academy.devdojo.request.ProducerPutRequest;
 import academy.devdojo.response.ProducerGetResponse;
 import academy.devdojo.response.ProducerPostResponse;
-import academy.devdojo.response.ProducerPutResponse;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-06-02T11:39:54-0300",
+    date = "2026-06-02T13:24:19-0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 26.0.1 (Oracle Corporation)"
 )
 public class ProducerMapperImpl implements ProducerMapper {
@@ -88,20 +87,5 @@ public class ProducerMapperImpl implements ProducerMapper {
         producerPostResponse.setName( producer.getName() );
 
         return producerPostResponse;
-    }
-
-    @Override
-    public ProducerPutResponse toProducerPutResponse(Producer producer) {
-        if ( producer == null ) {
-            return null;
-        }
-
-        ProducerPutResponse producerPutResponse = new ProducerPutResponse();
-
-        producerPutResponse.setId( producer.getId() );
-        producerPutResponse.setName( producer.getName() );
-        producerPutResponse.setCreatedAt( producer.getCreatedAt() );
-
-        return producerPutResponse;
     }
 }

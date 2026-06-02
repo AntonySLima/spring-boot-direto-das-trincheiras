@@ -18,7 +18,7 @@ public class AnimeService {
         return name == null ? repository.listAll() : repository.findByName(name);
     }
 
-    public Anime findById(Long id) {
+    public Anime findByIdOrThrowNotFound(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
@@ -34,6 +34,11 @@ public class AnimeService {
     }
 
     public void update(Anime animeToUpdate) {
+        assertAnimeExists(animeToUpdate.getId());
         repository.update(animeToUpdate);
+    }
+
+    public void assertAnimeExists(Long id) {
+        findByIdOrThrowNotFound(id);
     }
 }
